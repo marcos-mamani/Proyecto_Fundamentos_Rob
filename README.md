@@ -6,15 +6,15 @@ El proyecto del curso consiste en diseñar un robot manipulador serial con algun
 
 El proyecto tiene 2 partes: el reporte escrito (80 %) y la presentación oral (20 %). Las partes que debe contener el reporte escrito, con su puntaje, son las siguientes:
 
-###[1 pt] Introducción. 
+### [1 pt] Introducción. 
 
 Debe contener una introducción general al robot que se está usando, indicando características y posibles aplicaciones del mismo.
 
-###[2 pt] Componentes. 
+### [2 pt] Componentes. 
 
 Debe contener una descripción detallada de qué componentes utilizaría el robot si fuese implementado de manera real. Debe incluirse la estructura mecánica, el sistema de percepción, la actuación (y transmisión, de ser aplicable), así como los elementos que conformarían el sistema de control.
 
-###[3 pt] Modelo del robot. 
+### [3 pt] Modelo del robot. 
 
 Debe presentar el modelo del robot en RViz y Gazebo.
 
@@ -23,19 +23,19 @@ Se debe visualizar el diseño realizado (un boceto inicial mostrando el dimensio
 El incluir enmallado (mesh) para las partes del robot tiene un peso de 1 punto.
 La simulación con Gazebo tiene un peso de 1 punto. Para tener puntaje completo se debe demostrar la funcionalidad del modelo (movimiento articular básico) con imágenes o con algún video.
 
-###[4 pt] Cinemática directa e inversa
+### [4 pt] Cinemática directa e inversa
 
 Se debe mostrar el modelamiento cinemático (usando el método geométrico o Denavit-Hartenberg), así como algunas configuraciones esperadas y obtenidas a partir del modelo cinemático. La verificación debe, al menos, realizarse usando RViz (2 puntos).
 
 Se puede utilizar cualquier método para el cálculo de la cinemática inversa. Se debe mostrar cómo se implementó, verificando la validez para diferentes configuraciones (2 puntos). Para tener puntaje completo, en el caso de usar un método numérico, se debe incluir gráficos que muestren la convergencia del algoritmo en diferentes configuraciones.
 
-###[4 pt] Control Cinemático
+### [4 pt] Control Cinemático
 
 Se debe obtener el modelo cinemático diferencial del robot, mostrando claramente el procedimiento seguido para el cálculo de los Jacobianos que sean relevantes. Se debe indicar matemáticamente cómo se llegó al Jacobiano (justificar el cálculo numérico con ecuaciones). Se debe, además, indicar las posibles configuraciones singulares del robot (2 puntos).
 
 Se debe implementar control cinemático verificando el movimiento con RViz a través de la visualización y de gráficos que muestren el funcionamiento adecuado para diferentes casos. Por facilidad, se puede solo hacer control de posición (2 puntos).
 
-###[3 pt] Dinámica y Control Dinámico
+### [3 pt] Dinámica y Control Dinámico
 
 Se debe mostrar de manera detallada el procedimiento seguido para el cálculo de la dinámica del robot. Se recomienda indicar un ejemplo de la matriz M, C, g obtenidas para al menos una configuración particular, indicando dicha configuración. Se puede utilizar algún paquete como RBDL (1 punto).
 
