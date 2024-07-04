@@ -1,0 +1,54 @@
+#!/usr/bin/env python
+import rospy
+from sensor_msgs.msg import JointState
+
+from markers import *
+from lab3functions import *
+
+import numpy as np
+from copy import copy
+
+cos=np.cos; sin=np.sin; pi=np.pi
+
+rospy.init_node("testForwardKinematics")
+pub = rospy.Publisher('joint_states', JointState, queue_size=1)
+bmarker = BallMarker(color['GREEN'])
+
+# Joint names
+jnames = ['base_link1', 'link1_link2', 'link2_link3','link3_link4', 'link4_link5', 'link5_link6','link6_link7']
+# Joint Configuration
+#q = [1.2, 1.2, 0, 0, 0.2, 0, 0.2]
+#q = [0.2, 0.3, 0, 0, 0.5, 0.7, 0.5]
+#q = [0.1, 1.2, 0, 0, 0.5, 0.5, 0.6]
+##q = [0.2, 0.3, 0, 0.2, 0.5, 0.7, 0.8]
+q = [1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+#q = [-0.3, 0.1, 0.5,0,0, 0, 0]
+#q = [0, 0, 0, 0,0, 0, 0]
+    #ORIGINAL:[q0,q1,q6,q5,q3,q2,q4]
+
+#[q0,q1,q6,q5,q4,q3,q2]
+
+# End effector with respect to the base
+T = fkine_robot(q)
+print( np.round(T, 3) )
+bmarker.position(T)
+
+# Object (message) whose type is JointState
+jstate = JointState()
+# Set values to the message
+jstate.header.stamp = rospy.Time.now()
+jstate.name = jnames
+# Add the head joint value (with value 0) to the joints
+jstate.position = q
+
+# Loop rate (in Hz)
+rate = rospy.Rate(20)
+# Continuous execution loop
+while not rospy.is_shutdown():
+    # Current time (needed for ROS)
+    jstate.header.stamp = rospy.Time.now()
+    # Publish the message
+    pub.publish(jstate)
+    bmarker.publish()
+    # Wait for the next iteration
+    rate.sleep()
