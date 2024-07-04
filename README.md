@@ -43,7 +43,9 @@ Debe implementarse dos esquemas de control dinámico para el robot, mostrando la
 
 ### [1 pt] Conclusiones y Recomendaciones
 
-### [1 pt] Anexo: código impementado. Se debe incluir el código comentado de las partes más importantes implementados (no de todos los programas). De manera alternativa, se puede incluir el enlace de un repositorio de github creado para el proyecto (en este caso debe indicarse claramente qué archivo implementa qué parte).
+### [1 pt] Anexo: 
+
+Código impementado. Se debe incluir el código comentado de las partes más importantes implementados (no de todos los programas). De manera alternativa, se puede incluir el enlace de un repositorio de github creado para el proyecto (en este caso debe indicarse claramente qué archivo implementa qué parte).
 
 Para cada figura utilizada se debe tener algún comentario pertinente: no basta con incluir la figura, sino que hay que indicar qué se muestra en dicha figura. Además, la adecuada redacción, ortografía y orden tendrá un peso de 1 punto. Para la redacción, cada figura y tabla debe tener un título y numeración (Tabla 1, Figura 1), y deben ser referenciadas desde el texto. El reporte se puede presentar en cualquier formato: como reporte (en una sola columna) o como artículo (en 2 columnas).
 
