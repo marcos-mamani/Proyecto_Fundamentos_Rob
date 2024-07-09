@@ -1,0 +1,35 @@
+Robot_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  base_link1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: base_link1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  link1_link2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: link1_link2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  link2_link3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: link2_link3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  link3_link4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: link3_link4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  link4_link5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: link4_link5
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  link5_link6_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: link5_link6
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  link6_link7_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: link6_link7
+    pid: {p: 100.0, i: 0.01, d: 10.0}
